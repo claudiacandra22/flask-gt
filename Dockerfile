@@ -1,0 +1,1 @@
+FROM python:3-alpine # Buat direktori aplikasi WORKDIR /app # Instal dependensi aplikasi SALIN requirements.txt ./ RUN pip install -r requirements.txt # Bundel sumber aplikasi COPY . . EXPOSE 5000 CMD [ "flask", "run","--host","0.0.0.0","--port","5000"] 
